@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-primary text-gray-900;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* 按钮样式 */
+  .btn-primary {
+    @apply bg-primary-500 text-white px-6 py-3 font-medium transition-all duration-200 hover:bg-primary-600 hover:shadow-soft;
+  }
+  
+  .btn-primary-clip {
+    @apply btn-primary;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary-500 text-primary-500 px-6 py-3 font-medium bg-transparent transition-all duration-200 hover:bg-primary-500 hover:text-white;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 text-gray-900 px-6 py-3 font-medium transition-all duration-200 hover:bg-accent-400 hover:shadow-glow;
+  }
+  
+  /* 标签样式 */
+  .tag-outline {
+    @apply border border-primary-500 text-primary-500 px-3 py-1 text-sm rounded-full bg-transparent transition-all duration-200 hover:bg-primary-500 hover:text-white cursor-pointer;
+  }
+  
+  /* 卡片样式 */
+  .card {
+    @apply bg-background-card rounded-lg shadow-soft border border-gray-100;
+  }
+  
+  /* 模态框样式 */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+  }
+  
+  .modal-content {
+    @apply bg-background-card rounded-lg shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-hidden animate-modal-in;
+  }
+  
+  /* 平滑过渡 */
+  .smooth-transition {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
