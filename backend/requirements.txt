@@ -7,3 +7,10 @@ pydantic-settings
 boto3
 Pillow
 alembic
+# Testing dependencies
+pytest
+pytest-asyncio
+pytest-cov
+httpx
+factory-boy
+faker
